@@ -4,7 +4,7 @@ import it from './locales/it.json'
 
 const i18n = createI18n({
   legacy: false,
-  locale: localStorage.getItem('locale') || 'de',
+  locale: typeof window !== 'undefined' ? (localStorage.getItem('locale') || 'de') : 'de',
   fallbackLocale: 'de',
   messages: {
     de,

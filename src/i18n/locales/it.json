@@ -28,7 +28,7 @@
   "contact_info": {
     "address": "Domplatz 20",
     "city": "IT - 39042 Bressanone, Alto Adige (BZ)",
-    "email": "info@ireneberti.eu",
+    "email": "info{'@'}ireneberti.eu",
     "phone": "+39 379 20 11 123"
   },
   "about": {
@@ -95,7 +95,7 @@
     "name": "Il tuo nome",
     "name_placeholder": "Mario Rossi",
     "email": "Indirizzo e-mail",
-    "email_placeholder": "tua.email@esempio.it",
+    "email_placeholder": "tua.email{'@'}esempio.com",
     "phone_label": "Numero di telefono (opzionale)",
     "phone_placeholder": "+39 ...",
     "date": "Data desiderata",

@@ -28,7 +28,7 @@
   "contact_info": {
     "address": "Domplatz 20",
     "city": "IT - 39042 Brixen, Südtirol (BZ)",
-    "email": "info@ireneberti.eu",
+    "email": "info{'@'}ireneberti.eu",
     "phone": "+39 379 20 11 123"
   },
   "about": {
@@ -95,7 +95,7 @@
     "name": "Ihr Name",
     "name_placeholder": "Max Mustermann",
     "email": "E-Mail Adresse",
-    "email_placeholder": "ihre.email@beispiel.com",
+    "email_placeholder": "ihre.email{'@'}beispiel.com",
     "phone_label": "Telefonnummer (optional)",
     "phone_placeholder": "+39 ...",
     "date": "Gewünschter Termin",
