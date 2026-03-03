@@ -4,10 +4,14 @@ import { useRouter, useRoute } from 'vue-router'
 import { watch, onMounted } from 'vue'
 import Navigation from './components/Navigation.vue'
 import Footer from './components/Footer.vue'
+import { useSeo } from './composables/useSeo'
 
 const { locale } = useI18n()
 const router = useRouter()
 const route = useRoute()
+
+// Initialize SEO
+useSeo()
 
 // Set locale from URL or localStorage
 onMounted(() => {

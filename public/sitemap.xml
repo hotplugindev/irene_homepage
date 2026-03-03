@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage DE -->
+  <url>
+    <loc>https://ireneberti.eu/de/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Homepage IT -->
+  <url>
+    <loc>https://ireneberti.eu/it/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Neurofeedback DE -->
+  <url>
+    <loc>https://ireneberti.eu/de/neurofeedback</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/neurofeedback" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/neurofeedback" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Neurofeedback IT -->
+  <url>
+    <loc>https://ireneberti.eu/it/neurofeedback</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/neurofeedback" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/neurofeedback" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- About DE -->
+  <url>
+    <loc>https://ireneberti.eu/de/about</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/about" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/about" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- About IT -->
+  <url>
+    <loc>https://ireneberti.eu/it/about</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/about" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/about" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Contact DE -->
+  <url>
+    <loc>https://ireneberti.eu/de/contact</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/contact" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Contact IT -->
+  <url>
+    <loc>https://ireneberti.eu/it/contact</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/contact" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Booking DE -->
+  <url>
+    <loc>https://ireneberti.eu/de/booking</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/booking" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/booking" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Booking IT -->
+  <url>
+    <loc>https://ireneberti.eu/it/booking</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/booking" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/booking" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Privacy DE -->
+  <url>
+    <loc>https://ireneberti.eu/de/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/privacy" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/privacy" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Privacy IT -->
+  <url>
+    <loc>https://ireneberti.eu/it/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/privacy" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/privacy" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Impressum DE -->
+  <url>
+    <loc>https://ireneberti.eu/de/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/impressum" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/impressum" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Impressum IT -->
+  <url>
+    <loc>https://ireneberti.eu/it/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ireneberti.eu/de/impressum" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://ireneberti.eu/it/impressum" />
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+</urlset>
