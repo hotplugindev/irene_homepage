@@ -200,12 +200,12 @@ const closeMobile = () => {
   color: var(--text-primary);
 }
 
-.nav-links a.router-link-active {
+.nav-links a.router-link-exact-active {
   color: var(--text-primary);
   font-weight: 600;
 }
 
-.nav-links a.router-link-active::after {
+.nav-links a.router-link-exact-active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -366,7 +366,7 @@ const closeMobile = () => {
   padding-left: 1rem;
 }
 
-.mobile-links a.router-link-active {
+.mobile-links a.router-link-exact-active {
   color: var(--text-primary);
   font-weight: 700;
 }
