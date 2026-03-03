@@ -32,6 +32,11 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  /* opacity overlays */
+  --opacity-light: rgba(255, 255, 255, 0.3);
+  --opacity-medium: rgba(255, 255, 255, 0.5);
+  --opacity-dark: rgba(255, 255, 255, 0.8);
   
   /* Transitions */
   --transition-fast: 0.15s ease;
@@ -55,6 +60,11 @@
   --border-color: #2a2a2a;
   --accent: #ffffff;
   --accent-hover: #e5e5e5;
+
+  /* opacity overlays */
+  --opacity-light: rgba(0, 0, 0, 0.3);
+  --opacity-medium: rgba(0, 0, 0, 0.5);
+  --opacity-dark: rgba(0, 0, 0, 0.8);
 }
 
 html {
@@ -67,6 +77,8 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
   font-family: var(--font-family);
   font-size: 1rem;
   line-height: 1.6;
@@ -75,6 +87,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+  transition: background var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) var(--bg-secondary);
 }
 
 #app {

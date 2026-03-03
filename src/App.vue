@@ -57,6 +57,23 @@ watch(() => route.params.locale, (newLocale) => {
   transition: opacity 0.3s ease;
 }
 
+html, body, #app {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;              /* THIS is what makes it work */
+  display: flex;
+  flex-direction: column;
+}
+
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;

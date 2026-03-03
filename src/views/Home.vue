@@ -2,7 +2,7 @@
   <div class="home">
     <section class="hero">
       <div class="hero-content">
-        <img :src="isDark ? '/logo_ire_neurofeedback.svg' : '/logo_ire_neurofeedback_dark.svg'" alt="IRE Neurofeedback" class="hero-logo" />
+        <img :src="isDark ? '/logo_ire_neurofeedback.svg' : '/logo_ire_neurofeedback_dark_text.svg'" alt="IRE Neurofeedback" class="hero-logo" />
         <h1>{{ t('home.title') }}</h1>
         <p class="hero-subtitle">{{ t('home.subtitle') }}</p>
         <div class="hero-actions">
@@ -93,15 +93,41 @@ const { isDark } = useTheme()
 </script>
 
 <style scoped>
+
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .hero {
-  min-height: 70vh;
+  flex: 0 0 auto;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
+  background-image: url('/back.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 6rem 2rem 4rem;
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--opacity-medium); /* 0.5 = 50% opacity */
+  z-index: 1;
+}
+
 .hero-content {
+  z-index: 2;
   max-width: 700px;
   text-align: center;
 }
@@ -178,7 +204,7 @@ h1 {
 }
 
 .intro-highlight {
-  max-width: 700px;
+  max-width: 1100px;
   margin: 0 auto 4rem;
   text-align: center;
   padding: 3rem 2rem;
