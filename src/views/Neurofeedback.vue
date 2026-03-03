@@ -84,7 +84,7 @@ const { t, locale } = useI18n()
 .hero {
   position: relative;
   overflow: hidden;
-  background-image: url('/neurofeedback.jpeg');
+  background-image: url('/neurofeedback.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
