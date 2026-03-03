@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500px"
+   height="354px"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg246"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   sodipodi:docname="logo_ire_neurofeedback_a.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview248"
+     pagecolor="#dedede"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="2.0153513"
+     inkscape:cx="242.6376"
+     inkscape:cy="182.84654"
+     inkscape:window-width="1860"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1442" />
+  </sodipodi:namedview>
+  <defs
+     id="defs243">
+    <rect
+       x="245.78532"
+       y="140.80982"
+       width="302.73491"
+       height="160.25432"
+       id="rect1587" />
+    <rect
+       x="799.28569"
+       y="411.60958"
+       width="220.61576"
+       height="61.58172"
+       id="rect576" />
+    <rect
+       x="73.631956"
+       y="331.54042"
+       width="248.97718"
+       height="42.981153"
+       id="rect520" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="layer3"
+       transform="matrix(0.26458333,0,0,0.26458333,100.616,37.841289)">
+      <ellipse
+         style="fill:#008080;fill-opacity:0.988235;stroke:#ffffff;stroke-width:15.185;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;image-rendering:auto"
+         id="path10807"
+         cx="249.87296"
+         cy="238.13197"
+         rx="206.95241"
+         ry="206.96748" />
+    </g>
+    <g
+       id="layer1-3"
+       transform="matrix(0.26458333,0,0,0.26458333,99.495061,38.505015)">
+      <path
+         style="fill:#008080;fill-opacity:0.988235;stroke:#ffffff;stroke-width:10.258;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         d="m 702.6279,241.64377 -287.2913,0.16718 c -39.19956,0.0228 -51.76748,-5.86402 -57.34199,-14.98854 -9.80951,-16.0565 -23.40145,-15.80296 -24.19273,18.63634 -2.62916,45.90948 -28.55609,37.00874 -29.84373,-0.53437 -26.94812,-305.051586 -35.0414,-104.45787 -49.0289,-3.03626 -15.19962,158.20843 -23.82362,168.40537 -43.1372,4.71882 -11.1683,-113.51269 -37.76568,-28.81872 -44.41418,-1.85243 -18.6934,80.29546 -27.79033,-2.79285 -47.93761,-2.81873 l -461.66086,-0.59302"
+         id="path10746"
+         sodipodi:nodetypes="csscccccsc" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.7px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';fill:#ffffff;fill-opacity:0.988235;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:0.00355967;paint-order:markers fill stroke"
+       x="9.8382921"
+       y="97.522865"
+       id="text1340"><tspan
+         sodipodi:role="line"
+         id="tspan1338"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.7px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';stroke-width:0"
+         x="9.8382921"
+         y="97.522865">neurofeedback</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#ffffff;fill-opacity:0.988235;stroke:none;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:0.00355967;paint-order:markers fill stroke"
+       x="237.57349"
+       y="115.6083"
+       id="text1344"><tspan
+         sodipodi:role="line"
+         id="tspan1342"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0"
+         x="237.57349"
+         y="115.6083">irene berti</tspan></text>
+  </g>
+</svg>

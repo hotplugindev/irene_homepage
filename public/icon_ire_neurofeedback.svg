@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500.0px"
+   height="500.0px"
+   viewBox="0 0 500.0 500.0"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="icon_ire_neurofeedback_2.2.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   inkscape:export-filename="../d06c23c4/neurofeedback_ire_icon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview8122"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.628"
+     inkscape:cx="209.76658"
+     inkscape:cy="251.53563"
+     inkscape:window-width="1860"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="SVGRoot" />
+  <defs
+     id="defs8315" />
+  <g
+     id="layer3"
+     transform="matrix(-1,0,0,1,499.74591,0)">
+    <ellipse
+       style="fill:#008080;fill-opacity:0.988235;stroke:#ffffff;stroke-width:15.185;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;image-rendering:auto"
+       id="path10807"
+       cx="249.87296"
+       cy="238.13197"
+       rx="206.95241"
+       ry="206.96748" />
+  </g>
+  <g
+     id="layer1"
+     transform="matrix(-1,0,0,1,499.74591,0)">
+    <path
+       style="fill:#008080;fill-opacity:0.988235;stroke:#ffffff;stroke-width:10.258;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 45.245852,245.01433 c 1.295527,-2.00066 91.984698,3.11859 95.669588,-5.73232 15.20022,-36.5101 26.49008,-9.10861 29.48201,6.17674 2.62916,45.90948 28.55609,37.00874 29.84373,-0.53437 26.94812,-305.051586 35.0414,-104.45787 49.0289,-3.03626 15.19962,158.20843 23.82361,168.40537 43.13716,4.71882 11.16828,-113.51269 37.76566,-28.81872 44.41416,-1.85243 18.69342,80.29546 29.38789,1.03448 48.21227,0.1124 37.69575,-1.84645 73.53307,-0.0932 73.53307,-0.0932"
+       id="path10746" />
+  </g>
+</svg>
