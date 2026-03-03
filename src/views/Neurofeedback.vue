@@ -82,12 +82,30 @@ const { t, locale } = useI18n()
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  position: relative;
+  overflow: hidden;
+  background-image: url('/neurofeedback.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 8rem 2rem 6rem;
   border-bottom: 1px solid var(--border-color);
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--opacity-medium);
+  z-index: 1;
+}
+
 .hero-content {
+  position: relative;
+  z-index: 2;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;

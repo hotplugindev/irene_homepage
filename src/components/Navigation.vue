@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="nav-container">
       <router-link :to="`/${locale}`" class="logo">
-        <img src="/icon_ire_neurofeedback.svg" alt="Irene Berti Logo" class="logo-image" width="40" height="40"/>
+        <img src="/icon_ire_neurofeedback.svg" alt="Irene Berti Logo" class="logo-image" width="50" height="50"/>
         <div class="logo-text-container">
             <span class="logo-text">Irene Berti</span>
             <span class="logo-subtitle">{{ t('nav.logo-subtitle') }}</span>
