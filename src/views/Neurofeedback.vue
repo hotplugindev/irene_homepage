@@ -61,11 +61,6 @@
           <p>{{ t('neurofeedback.benefits_text') }}</p>
         </div>
       </div>
-
-      <div class="cta-card">
-        <h3>{{ t('neurofeedback.cta_title') }}</h3>
-        <router-link :to="`/${locale}/booking`" class="btn">{{ t('neurofeedback.cta_button') }}</router-link>
-      </div>
     </div>
   </div>
 </template>
@@ -306,22 +301,6 @@ const { t, locale } = useI18n()
   margin: 0;
 }
 
-.cta-card {
-  background: var(--bg-primary);
-  padding: 3.5rem 3rem;
-  border-radius: 20px;
-  border: 2px solid var(--border-color);
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-}
-
-.cta-card h3 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin: 0 0 2rem;
-  color: var(--text-primary);
-}
-
 .btn {
   padding: 1rem 3rem;
   border-radius: 10px;
@@ -370,8 +349,7 @@ const { t, locale } = useI18n()
   }
 
   .intro-card,
-  .benefits-card,
-  .cta-card {
+  .benefits-card{
     padding: 2rem 1.5rem;
   }
 }

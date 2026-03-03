@@ -9,7 +9,6 @@
   },
   "home": {
     "title": "Studio di Neuropsichiatria Infantile e Psicoterapia",
-    "subtitle": "Psicoterapeuta e neuropsichiatra infantile",
     "cta_booking": "Prenota appuntamento",
     "cta_about": "Chi sono",
     "welcome_title": "Benvenuti nel mio studio",
@@ -20,10 +19,7 @@
     "section2_text": "Con la mia esperienza professionale e le mie conoscenze specialistiche vorrei sostenere te e i tuoi genitori nel percorrere nuove strade.",
     "section3_title": "Terapia Neurofeedback",
     "section3_text": "In aggiunta o anche indipendentemente, presento volentieri il Neurofeedback come un'offerta terapeutica estesa.",
-    "learn_more": "Scopri di più",
-    "cta_banner_title": "Pronto per il primo passo?",
-    "cta_banner_text": "Prenota ora un appuntamento per un primo colloquio",
-    "cta_banner_button": "Prenota appuntamento"
+    "learn_more": "Scopri di più"
   },
   "contact_info": {
     "address": "Domplatz 20",
@@ -44,9 +40,7 @@
     "education3": "Specialista dal 2013, conferito in Germania",
     "specializations_title": "Specializzazioni",
     "specializations_text": "Tratto l'intero spettro delle malattie neuropsichiatriche infantili con particolare attenzione ai metodi terapeutici innovativi come il Neurofeedback.",
-    "cta_title": "Prenota un appuntamento",
-    "cta_text": "Sarò lieta di conoscere te e tuo figlio.",
-    "cta_button": "Richiedi appuntamento"
+    "cta_title": "Prenota un appuntamento"
   },
   "contact": {
     "title": "Contatti",
@@ -124,9 +118,7 @@
     "app4_title": "Ottimizzazione delle prestazioni",
     "app4_text": "Aumento delle prestazioni cognitive e della forma mentale.",
     "benefits_title": "Vantaggi",
-    "benefits_text": "Il Neurofeedback è un metodo non invasivo, privo di effetti collaterali, che consente miglioramenti duraturi. La terapia è adattabile individualmente e può essere utilizzata come trattamento autonomo o in combinazione con altre forme di terapia.",
-    "cta_title": "Interessato al Neurofeedback?",
-    "cta_button": "Prenota consulenza"
+    "benefits_text": "Il Neurofeedback è un metodo non invasivo, privo di effetti collaterali, che consente miglioramenti duraturi. La terapia è adattabile individualmente e può essere utilizzata come trattamento autonomo o in combinazione con altre forme di terapia."
   },
   "privacy": {
     "title": "Informativa sulla privacy",

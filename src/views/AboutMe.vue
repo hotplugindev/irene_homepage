@@ -41,12 +41,6 @@
           </div>
         </div>
       </div>
-
-      <div class="cta-card">
-        <h3>{{ t('about.cta_title') }}</h3>
-        <p>{{ t('about.cta_text') }}</p>
-        <router-link :to="`/${locale}/booking`" class="btn">{{ t('about.cta_button') }}</router-link>
-      </div>
     </div>
   </div>
 </template>
@@ -198,28 +192,6 @@ const { t, locale } = useI18n()
   margin: 0;
 }
 
-.cta-card {
-  background: var(--bg-secondary);
-  padding: 3rem;
-  border-radius: 16px;
-  border: 1px solid var(--border-color);
-  text-align: center;
-}
-
-.cta-card h3 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin: 0 0 1rem;
-  color: var(--text-primary);
-}
-
-.cta-card p {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  margin: 0 0 2rem;
-  line-height: 1.6;
-}
-
 .btn {
   padding: 1rem 2.5rem;
   border-radius: 8px;
@@ -266,8 +238,7 @@ const { t, locale } = useI18n()
     font-size: 2rem;
   }
 
-  .info-card,
-  .cta-card {
+  .info-card {
     padding: 2rem 1.5rem;
   }
 }

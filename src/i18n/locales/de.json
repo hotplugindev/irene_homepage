@@ -9,7 +9,6 @@
   },
   "home": {
     "title": "Praxis für Kinder- und Jugendpsychiatrie und -psychotherapie",
-    "subtitle": "Fachärztin für Kinder- und Jugendpsychiatrie und -psychotherapie",
     "cta_booking": "Termin vereinbaren",
     "cta_about": "Über mich",
     "welcome_title": "Willkommen in meiner Praxis",
@@ -20,10 +19,7 @@
     "section2_text": "Mit meiner beruflichen Erfahrung und meinem fachärztlichen Wissen möchte ich dich und deine Eltern dabei unterstützen, neue Wege zu gehen.",
     "section3_title": "Neurofeedback Therapie",
     "section3_text": "Zusätzlich oder auch unabhängig davon stelle ich gerne Neurofeedback als ein erweitertes Therapie-Angebot vor.",
-    "learn_more": "Mehr erfahren",
-    "cta_banner_title": "Bereit für den ersten Schritt?",
-    "cta_banner_text": "Vereinbaren Sie jetzt einen Termin für ein erstes Gespräch",
-    "cta_banner_button": "Termin vereinbaren"
+    "learn_more": "Mehr erfahren"
   },
   "contact_info": {
     "address": "Domplatz 20",
@@ -44,9 +40,7 @@
     "education3": "Fachärztin seit 2013, verliehen in Deutschland",
     "specializations_title": "Spezialisierungen",
     "specializations_text": "Ich behandle das gesamte Spektrum der kinder- und jugenpsychiatrischen Erkrankungen mit besonderem Fokus auf innovative Therapiemethoden wie Neurofeedback.",
-    "cta_title": "Vereinbaren Sie einen Termin",
-    "cta_text": "Ich freue mich darauf, Sie und Ihr Kind kennenzulernen.",
-    "cta_button": "Termin anfragen"
+    "cta_title": "Vereinbaren Sie einen Termin"
   },
   "contact": {
     "title": "Kontakt",
@@ -124,9 +118,7 @@
     "app4_title": "Leistungsoptimierung",
     "app4_text": "Steigerung der kognitiven Leistungsfähigkeit und mentalen Fitness.",
     "benefits_title": "Vorteile",
-    "benefits_text": "Neurofeedback ist eine nicht-invasive, nebenwirkungsfreie Methode, die nachhaltige Verbesserungen ermöglicht. Die Therapie ist individuell anpassbar und kann als eigenständige Behandlung oder in Kombination mit anderen Therapieformen eingesetzt werden.",
-    "cta_title": "Interesse an Neurofeedback?",
-    "cta_button": "Beratungstermin vereinbaren"
+    "benefits_text": "Neurofeedback ist eine nicht-invasive, nebenwirkungsfreie Methode, die nachhaltige Verbesserungen ermöglicht. Die Therapie ist individuell anpassbar und kann als eigenständige Behandlung oder in Kombination mit anderen Therapieformen eingesetzt werden."
   },
   "privacy": {
     "title": "Datenschutzerklärung",

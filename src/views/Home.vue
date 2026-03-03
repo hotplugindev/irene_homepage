@@ -4,7 +4,6 @@
       <div class="hero-content">
         <img :src="isDark ? '/logo_ire_neurofeedback.svg' : '/logo_ire_neurofeedback_dark_text.svg'" alt="IRE Neurofeedback" class="hero-logo" />
         <h1>{{ t('home.title') }}</h1>
-        <p class="hero-subtitle">{{ t('home.subtitle') }}</p>
         <div class="hero-actions">
           <router-link :to="`/${locale}/booking`" class="btn btn-primary">{{ t('home.cta_booking') }}</router-link>
           <router-link :to="`/${locale}/about`" class="btn btn-secondary">{{ t('home.cta_about') }}</router-link>
@@ -66,19 +65,6 @@
             <p>{{ t('home.section3_text') }}</p>
           </div>
         </div>
-
-        <div class="cta-banner">
-          <div class="cta-content">
-            <h3>{{ t('home.cta_banner_title') }}</h3>
-            <p>{{ t('home.cta_banner_text') }}</p>
-          </div>
-          <router-link :to="`/${locale}/booking`" class="cta-btn">
-            {{ t('home.cta_banner_button') }}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </router-link>
-        </div>
       </div>
     </section>
   </div>
@@ -128,7 +114,7 @@ const { isDark } = useTheme()
 
 .hero-content {
   z-index: 2;
-  max-width: 700px;
+  max-width: 1000px;
   text-align: center;
 }
 
@@ -156,6 +142,7 @@ h1 {
 }
 
 .hero-actions {
+  margin-top: 3rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -333,60 +320,6 @@ h1 {
   transform: translateX(4px);
 }
 
-.cta-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-  padding: 3.5rem 3rem;
-  border-radius: 20px;
-  border: 2px solid var(--border-color);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.cta-content h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-  color: var(--text-primary);
-}
-
-.cta-content p {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1.1rem 2.5rem;
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all var(--transition-base);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-.cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
-  gap: 1rem;
-}
-
-.cta-btn svg {
-  transition: transform var(--transition-base);
-}
-
-.cta-btn:hover svg {
-  transform: translateX(4px);
-}
 
 @media (max-width: 768px) {
   .hero {
@@ -404,17 +337,6 @@ h1 {
 
   .features-grid {
     grid-template-columns: 1fr;
-  }
-
-  .cta-banner {
-    flex-direction: column;
-    text-align: center;
-    padding: 2.5rem 2rem;
-  }
-
-  .cta-btn {
-    width: 100%;
-    justify-content: center;
   }
 }
 </style>
