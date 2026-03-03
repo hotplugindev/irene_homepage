@@ -7,16 +7,16 @@
 
 :root {
   /* Light Theme */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --bg-tertiary: #e9ecef;
-  --text-primary: #1a1a1a;
-  --text-secondary: #4a4a4a;
-  --text-tertiary: #737373;
-  --border-color: #e5e5e5;
-  --accent: #1a1a1a;
-  --accent-hover: #000000;
-  
+  --bg-primary: #fafaf8;
+  --bg-secondary: #f5f5f3;
+  --bg-tertiary: #efeeec;
+  --text-primary: #3a3a38;
+  --text-secondary: #5f5f5d;
+  --text-tertiary: #7f7f7d;
+  --border-color: #e3e3e1;
+  --accent: #3a3a38;
+  --accent-hover: #2a2a28;
+
   /* Typography */
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-size-base: 16px;
@@ -29,14 +29,15 @@
   --spacing-xl: 3rem;
   
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 1px 3px rgba(28, 28, 26, 0.05);
+  --shadow-md: 0 2px 8px rgba(28, 28, 26, 0.08);
+  --shadow-lg: 0 4px 16px rgba(28, 28, 26, 0.12);
 
   /* opacity overlays */
-  --opacity-light: rgba(255, 255, 255, 0.3);
-  --opacity-medium: rgba(255, 255, 255, 0.5);
-  --opacity-dark: rgba(255, 255, 255, 0.8);
+  --opacity-light: rgba(250, 250, 248, 0.3);
+  --opacity-medium: rgba(250, 250, 248, 0.5);
+  --opacity-dark: rgba(250, 250, 248, 0.8);
+
   
   /* Transitions */
   --transition-fast: 0.15s ease;
@@ -51,20 +52,20 @@
 
 .dark {
   /* Dark Theme */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #1a1a1a;
-  --bg-tertiary: #2a2a2a;
-  --text-primary: #ffffff;
-  --text-secondary: #b4b4b4;
-  --text-tertiary: #8a8a8a;
-  --border-color: #2a2a2a;
-  --accent: #ffffff;
-  --accent-hover: #e5e5e5;
+  --bg-primary: #1c1c1a;
+  --bg-secondary: #252523;
+  --bg-tertiary: #2f2f2d;
+  --text-primary: #e8e8e5;
+  --text-secondary: #babad7;
+  --text-tertiary: #93938f;
+  --border-color: #353533;
+  --accent: #e8e8e5;
+  --accent-hover: #f0f0ed;
 
   /* opacity overlays */
-  --opacity-light: rgba(0, 0, 0, 0.3);
-  --opacity-medium: rgba(0, 0, 0, 0.5);
-  --opacity-dark: rgba(0, 0, 0, 0.8);
+  --opacity-light: rgba(28, 28, 26, 0.3);
+  --opacity-medium: rgba(28, 28, 26, 0.5);
+  --opacity-dark: rgba(28, 28, 26, 0.8);
 }
 
 html {
