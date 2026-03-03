@@ -70,7 +70,27 @@
           <p>{{ t('contact_info.address') }}, {{ t('contact_info.city') }}</p>
         </div>
         <div class="map-container">
+          <div v-if="!mapLoaded" class="map-placeholder">
+            <div class="map-placeholder-content">
+              <div class="map-placeholder-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <h3>{{ t('contact.map_load_title') }}</h3>
+              <p>{{ t('contact.map_load_text') }}</p>
+              <button @click="loadMap" class="map-load-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                {{ t('contact.map_load_button') }}
+              </button>
+            </div>
+          </div>
           <iframe 
+            v-else
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.2877!2d11.65582!3d46.71516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47783e5e7d1ed14b%3A0x4f0b68c99b51b3f0!2sDomplatz%2020%2C%2039042%20Brixen%20BZ%2C%20Italy!5e0!3m2!1sen!2s!4v1234567890"
             allowfullscreen
             loading="lazy"
@@ -97,9 +117,15 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
+const mapLoaded = ref(false)
+
+const loadMap = () => {
+  mapLoaded.value = true
+}
 </script>
 
 <style scoped>
@@ -257,6 +283,7 @@ const { t, locale } = useI18n()
   overflow: hidden;
   border: 2px solid var(--border-color);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .map {
@@ -264,6 +291,68 @@ const { t, locale } = useI18n()
   height: 450px;
   border: none;
   display: block;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.map-placeholder-content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.map-placeholder-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--bg-primary);
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  margin: 0 auto 1.5rem;
+}
+
+.map-placeholder-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+}
+
+.map-placeholder-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 2rem;
+  line-height: 1.6;
+}
+
+.map-load-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.map-load-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .cta-card {
