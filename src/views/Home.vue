@@ -221,7 +221,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   /*background-color: var(--opacity-medium); /* 0.5 = 50% opacity */
-  background: linear-gradient(180deg, var(--opacity-light), var(--opacity-full));
+  background: linear-gradient(180deg, transparent, var(--opacity-full));
   z-index: 1;
 }
 
