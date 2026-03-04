@@ -2,7 +2,47 @@
   <div class="home">
     <section class="hero">
       <div class="hero-content">
-        <img :src="isDark ? '/logo_ire_neurofeedback.svg' : '/logo_ire_neurofeedback_dark_text.svg'" alt="IRE Neurofeedback" class="hero-logo" />
+        <svg ref="logoSvg" class="hero-logo" viewBox="0 0 297 210" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <g transform="matrix(0.26458333,0,0,0.26458333,100.616,37.841289)">
+              <ellipse
+                ref="circle"
+                :style="`fill:#008080;fill-opacity:0.988235;stroke:${isDark ? '#ffffff' : '#000000'};stroke-width:15.185;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;`"
+                cx="249.87296"
+                cy="238.13197"
+                rx="206.95241"
+                ry="206.96748" />
+            </g>
+            <g transform="matrix(0.26458333,0,0,0.26458333,99.495061,38.505015)">
+              <path
+                ref="brainwave"
+                :style="`fill:#008080;fill-opacity:0.988235;stroke:${isDark ? '#ffffff' : '#000000'};stroke-width:10.258;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke`"
+                d="m 702.6279,241.64377 -287.2913,0.16718 c -39.19956,0.0228 -51.76748,-5.86402 -57.34199,-14.98854 -9.80951,-16.0565 -23.40145,-15.80296 -24.19273,18.63634 -2.62916,45.90948 -28.55609,37.00874 -29.84373,-0.53437 -26.94812,-305.051586 -35.0414,-104.45787 -49.0289,-3.03626 -15.19962,158.20843 -23.82362,168.40537 -43.1372,4.71882 -11.1683,-113.51269 -37.76568,-28.81872 -44.41418,-1.85243 -18.6934,80.29546 -27.79033,-2.79285 -47.93761,-2.81873 l -461.66086,-0.59302" />
+            </g>
+            <text
+              ref="text1"
+              xml:space="preserve"
+              :style="`font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.7px;font-family:Ubuntu;fill:${isDark ? '#ffffff' : '#000000'};fill-opacity:0.988235;stroke:none;`"
+              x="9.8382921"
+              y="97.522865">
+              <tspan
+                style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.7px;font-family:Ubuntu;"
+                x="9.8382921"
+                y="97.522865">neurofeedback</tspan>
+            </text>
+            <text
+              ref="text2"
+              xml:space="preserve"
+              :style="`font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:Ubuntu;fill:${isDark ? '#ffffff' : '#000000'};fill-opacity:0.988235;stroke:none;`"
+              x="237.57349"
+              y="115.6083">
+              <tspan
+                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:Ubuntu;"
+                x="237.57349"
+                y="115.6083">irene berti</tspan>
+            </text>
+          </g>
+        </svg>
         <h1>{{ t('home.title') }}</h1>
         <div class="hero-actions">
           <router-link :to="`/${locale}/booking`" class="btn btn-primary">{{ t('home.cta_booking') }}</router-link>
@@ -56,12 +96,68 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useTheme } from '../composables/useTheme'
-import { Icon } from "@iconify/vue";
+import { Icon } from "@iconify/vue"
+import gsap from 'gsap'
 
 const { t, locale } = useI18n()
 const { isDark } = useTheme()
+
+const logoSvg = ref(null)
+const circle = ref(null)
+const brainwave = ref(null)
+const text1 = ref(null)
+const text2 = ref(null)
+
+onMounted(() => {
+  const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } })
+  
+  // Get the path length for the brainwave
+  const brainwavePath = brainwave.value
+  const pathLength = brainwavePath.getTotalLength()
+  
+  // Set initial state - hide everything
+  gsap.set(circle.value, { scale: 0, transformOrigin: "center" })
+  gsap.set(brainwavePath, {
+    strokeDasharray: pathLength,
+    strokeDashoffset: pathLength
+  })
+  gsap.set([text1.value, text2.value], { opacity: 0, y: 20 })
+  
+  // Animation sequence
+  tl.to(circle.value, {
+    scale: 1,
+    duration: 0.8,
+    ease: "back.out(1.7)"
+  })
+  .to(brainwavePath, {
+    strokeDashoffset: 0,
+    duration: 2,
+    ease: "power1.inOut"
+  }, "-=0.2")
+  .to(text1.value, {
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  }, "-=0.8")
+  .to(text2.value, {
+    opacity: 1,
+    y: 0,
+    duration: 0.6
+  }, "-=0.4")
+  
+  // Add subtle floating animation after everything loads
+  gsap.to(logoSvg.value, {
+    y: -10,
+    duration: 2,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+    delay: 2.5
+  })
+})
 </script>
 
 <style scoped>
