@@ -3,10 +3,7 @@
     <section class="hero">
       <div class="hero-content">
         <div class="hero-badge">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
+          <Icon icon="akar-icons:location" width="40" height="40"  style="color: currentColor" />
         </div>
         <h1>{{ t('contact.title') }}</h1>
         <p class="hero-lead">{{ t('contact.subtitle') }}</p>
@@ -17,45 +14,33 @@
       <div class="contact-cards">
         <a :href="`tel:${t('contact_info.phone')}`" class="contact-card phone-card">
           <div class="card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
+              <Icon icon="mdi-light:phone" width="32" height="32"  style="color: currentColor" />
           </div>
           <div class="card-content">
             <h3>{{ t('contact.phone_title') }}</h3>
             <p class="contact-value">{{ t('contact_info.phone') }}</p>
           </div>
           <div class="card-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
+              <Icon icon="mingcute:arrow-right-fill" width="20" height="20"  style="color: currentColor" />
           </div>
         </a>
 
         <a :href="`mailto:${t('contact_info.email')}`" class="contact-card email-card">
           <div class="card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
+              <Icon icon="material-symbols:mail-outline" width="32" height="32"  style="color: currentColor" />
           </div>
           <div class="card-content">
             <h3>{{ t('contact.email_title') }}</h3>
             <p class="contact-value">{{ t('contact_info.email') }}</p>
           </div>
           <div class="card-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
+              <Icon icon="mingcute:arrow-right-fill" width="20" height="20"  style="color: currentColor" />
           </div>
         </a>
 
         <div class="contact-card address-card">
           <div class="card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
+            <Icon icon="akar-icons:location" width="32" height="32"  style="color: currentColor" />
           </div>
           <div class="card-content">
             <h3>{{ t('contact.address_title') }}</h3>
@@ -73,18 +58,12 @@
           <div v-if="!mapLoaded" class="map-placeholder">
             <div class="map-placeholder-content">
               <div class="map-placeholder-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
+                <Icon icon="akar-icons:location" width="48" height="48"  style="color: currentColor" />
               </div>
               <h3>{{ t('contact.map_load_title') }}</h3>
               <p>{{ t('contact.map_load_text') }}</p>
               <button @click="loadMap" class="map-load-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
+                <Icon icon="mdi-light:map-marker" width="20" height="20"  style="color: currentColor" />
                 {{ t('contact.map_load_button') }}
               </button>
             </div>
@@ -107,9 +86,7 @@
         </div>
         <router-link :to="`/${locale}/booking`" class="btn">
           {{ t('contact.cta_button') }}
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
+          <Icon icon="mingcute:arrow-right-fill" width="20" height="20"  style="color: currentColor" />
         </router-link>
       </div>
     </div>
@@ -119,6 +96,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { Icon } from "@iconify/vue";
 
 const { t, locale } = useI18n()
 const mapLoaded = ref(false)

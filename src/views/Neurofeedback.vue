@@ -3,9 +3,7 @@
     <section class="hero">
       <div class="hero-content">
         <div class="hero-badge">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-          </svg>
+          <Icon icon="ri:pulse-line" width="40" height="40"  style="color: currentColor" />
         </div>
         <h1>{{ t('neurofeedback.title') }}</h1>
         <p class="hero-lead">{{ t('neurofeedback.subtitle') }}</p>
@@ -52,9 +50,7 @@
 
       <div class="benefits-card">
         <div class="benefits-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="20 6 9 17 4 12"/>
-          </svg>
+          <Icon icon="material-symbols:check-rounded" width="32" height="32"  style="color: currentColor" />
         </div>
         <div class="benefits-content">
           <h2>{{ t('neurofeedback.benefits_title') }}</h2>
@@ -67,6 +63,7 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
+import { Icon } from "@iconify/vue";
 
 const { t, locale } = useI18n()
 </script>
@@ -94,7 +91,7 @@ const { t, locale } = useI18n()
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--opacity-medium);
+  background: linear-gradient(180deg, var(--opacity-medium) 0%, var(--opacity-full) 100%);
   z-index: 1;
 }
 

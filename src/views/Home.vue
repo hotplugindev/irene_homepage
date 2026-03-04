@@ -15,10 +15,7 @@
       <div class="container">
         <div class="intro-highlight">
           <div class="intro-badge">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22 4 12 14.01 9 11.01"/>
-            </svg>
+            <Icon icon="ei:check" width="45" height="45"  style="color: var(--text-primary)" />
           </div>
           <h2>{{ t('home.welcome_title') }}</h2>
           <p class="intro-lead">{{ t('home.welcome_text') }}</p>
@@ -27,28 +24,19 @@
         <div class="features-grid">
           <div class="feature-card featured">
             <div class="feature-icon">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-              </svg>
+              <Icon icon="wpf:past" width="32" height="32"  style="color: var(--text-primary)" />
             </div>
-            <h3>{{ t('home.section2_title') }}</h3>
-            <p>{{ t('home.section2_text') }}</p>
+            <h3>{{ t('home.section3_title') }}</h3>
+            <p>{{ t('home.section3_text') }}</p>
             <router-link :to="`/${locale}/neurofeedback`" class="feature-link">
               {{ t('home.learn_more') }}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
+              <Icon icon="mingcute:arrow-right-fill" width="16" height="16"  style="color: var(--text-primary)" />
             </router-link>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
+              <Icon icon="radix-icons:people" width="28" height="28"  style="color: var(--text-primary)" />
             </div>
             <h3>{{ t('home.section1_title') }}</h3>
             <p>{{ t('home.section1_text') }}</p>
@@ -56,10 +44,7 @@
           
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
-              </svg>
+              <Icon icon="mdi:clock-outline" width="28" height="28"  style="color: var(--text-primary)" />
             </div>
             <h3>{{ t('home.section3_title') }}</h3>
             <p>{{ t('home.section3_text') }}</p>
@@ -73,6 +58,7 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 import { useTheme } from '../composables/useTheme'
+import { Icon } from "@iconify/vue";
 
 const { t, locale } = useI18n()
 const { isDark } = useTheme()
