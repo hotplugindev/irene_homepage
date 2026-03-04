@@ -29,7 +29,7 @@
             <text
               ref="text1"
               xml:space="preserve"
-              :style="`font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.7px;font-family:Ubuntu;fill:${isDark ? '#ffffff' : '#000000'};fill-opacity:0.988235;stroke:none;`"
+              :style="`font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.7px;font-family:Ubuntu;fill:${isDark ? '#ffffff' : '#1c1c1a'};fill-opacity:0.988235;stroke:none;`"
               x="9.8382921"
               y="97.522865">
               <tspan
@@ -40,7 +40,7 @@
             <text
               ref="text2"
               xml:space="preserve"
-              :style="`font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:Ubuntu;fill:${isDark ? '#ffffff' : '#000000'};fill-opacity:0.988235;stroke:none;`"
+              :style="`font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:Ubuntu;fill:${isDark ? '#ffffff' : '#1c1c1a'};fill-opacity:0.988235;stroke:none;`"
               x="237.57349"
               y="115.6083">
               <tspan
