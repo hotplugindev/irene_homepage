@@ -220,7 +220,8 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--opacity-medium); /* 0.5 = 50% opacity */
+  /*background-color: var(--opacity-medium); /* 0.5 = 50% opacity */
+  background: linear-gradient(180deg, var(--opacity-light), var(--opacity-full));
   z-index: 1;
 }
 
@@ -285,6 +286,7 @@ h1 {
   background: transparent;
   color: var(--text-primary);
   border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
 }
 
 .btn-secondary:hover {
