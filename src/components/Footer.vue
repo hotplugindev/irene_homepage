@@ -33,7 +33,6 @@ const { t, locale } = useI18n()
 .footer {
   background: var(--bg-primary);
   border-top: 1px solid var(--border-color);
-  margin-top: 6rem;
 }
 
 .footer-container {
