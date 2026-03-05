@@ -3,7 +3,7 @@
     <section class="hero">
       <div class="hero-content">
         <div class="hero-badge">
-          <Icon icon="ri:pulse-line" width="40" height="40"  style="color: currentColor" />
+          <IconPulseLine width="40" height="40" style="color: currentColor" />
         </div>
         <h1>{{ t('neurofeedback.title') }}</h1>
         <p class="hero-lead">{{ t('neurofeedback.subtitle') }}</p>
@@ -50,7 +50,7 @@
 
       <div class="benefits-card">
         <div class="benefits-icon">
-          <Icon icon="material-symbols:check-rounded" width="32" height="32"  style="color: currentColor" />
+          <IconCheckRounded width="32" height="32" style="color: currentColor" />
         </div>
         <div class="benefits-content">
           <h2>{{ t('neurofeedback.benefits_title') }}</h2>
@@ -63,7 +63,8 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
-import { Icon } from "@iconify/vue";
+import IconPulseLine from '~icons/ri/pulse-line'
+import IconCheckRounded from '~icons/material-symbols/check-rounded'
 
 const { t, locale } = useI18n()
 </script>

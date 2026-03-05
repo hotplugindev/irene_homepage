@@ -3,7 +3,7 @@
     <section class="hero">
       <div class="hero-content">
         <div class="hero-badge">
-          <Icon icon="uil:calendar" width="40" height="40"  style="color: var(--text-primary)" />
+          <IconCalendar width="40" height="40" style="color: var(--text-primary)" />
         </div>
         <h1>{{ t('booking.title') }}</h1>
         <p class="hero-lead">{{ t('booking.subtitle') }}</p>
@@ -21,14 +21,14 @@
         <div class="calendar-container">
           <div class="calendar-header">
             <button @click="previousWeek" class="nav-btn" :disabled="currentWeekIndex === 0">
-              <Icon icon="iconamoon:arrow-left-2-bold" width="24" height="24"  style="color: var(--text-primary)" />
+              <IconArrowLeft width="24" height="24" style="color: var(--text-primary)" />
             </button>
             <div class="calendar-title">
               <h3>{{ t('booking.select_date') }}</h3>
               <p class="week-indicator">{{ t('booking.week_of') }} {{ currentPeriodLabel }}</p>
             </div>
             <button @click="nextWeek" class="nav-btn" :disabled="currentWeekIndex >= availableWeeks.length - 1">
-              <Icon icon="iconamoon:arrow-right-2-bold" width="24" height="24"  style="color: var(--text-primary)" />
+              <IconArrowRight width="24" height="24" style="color: var(--text-primary)" />
             </button>
           </div>
 
@@ -87,7 +87,7 @@
           </div>
 
           <div v-else class="calendar-empty">
-            <Icon icon="uil:calendar" width="48" height="48"  style="color: var(--text-primary)" />
+            <IconCalendar width="48" height="48" style="color: var(--text-primary)" />
             <p>{{ t('booking.no_dates_available') }}</p>
           </div>
         </div>
@@ -149,7 +149,7 @@
 
           <button type="submit" class="btn-submit">
             <span>{{ t('booking.submit_button') }}</span>
-              <Icon icon="mingcute:arrow-right-fill" width="16" height="16"  style="color: currentColor" />
+              <IconArrowRightFill width="16" height="16" style="color: currentColor" />
           </button>
         </form>
 
@@ -157,11 +157,11 @@
           <p>{{ t('booking.contact_alternative') }}</p>
           <div class="contact-links">
             <a :href="`tel:${t('contact_info.phone')}`" class="contact-link">
-              <Icon icon="mdi-light:phone" width="16" height="16"  style="color: currentColor" />
+              <IconPhone width="16" height="16" style="color: currentColor" />
               {{ t('contact_info.phone') }}
             </a>
             <a :href="`mailto:${t('contact_info.email')}`" class="contact-link">
-              <Icon icon="material-symbols:mail-outline" width="16" height="16"  style="color: currentColor" />
+              <IconMail width="16" height="16" style="color: currentColor" />
               {{ t('contact_info.email') }}
             </a>
           </div>
@@ -174,7 +174,12 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Icon } from "@iconify/vue";
+import IconCalendar from '~icons/uil/calendar'
+import IconArrowLeft from '~icons/iconamoon/arrow-left-2-bold'
+import IconArrowRight from '~icons/iconamoon/arrow-right-2-bold'
+import IconArrowRightFill from '~icons/mingcute/arrow-right-fill'
+import IconPhone from '~icons/mdi-light/phone'
+import IconMail from '~icons/material-symbols/mail-outline'
 
 const { t, locale } = useI18n()
 

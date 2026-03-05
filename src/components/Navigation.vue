@@ -28,8 +28,8 @@
               <button @click="setLocale('it')" :class="{ active: locale === 'it' }">IT</button>
             </div>
             <button @click="toggleTheme" class="theme-toggle" :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
-              <Icon v-if="isDark" icon="si:sun-line" width="24" height="24"  style="color: var(--text-primary)" />
-              <Icon v-else icon="solar:moon-linear" width="24" height="24"  style="color: var(--text-primary)" />
+              <IconSunLine v-if="isDark" width="24" height="24" style="color: var(--text-primary)" />
+              <IconMoonLinear v-else width="24" height="24" style="color: var(--text-primary)" />
             </button>
           </div>
         </div>
@@ -57,8 +57,8 @@
           <button @click="setLocale('it')" :class="{ active: locale === 'it' }">IT</button>
         </div>
         <button @click="toggleTheme" class="theme-toggle">
-            <Icon v-if="isDark" icon="si:sun-line" width="24" height="24"  style="color: var(--text-primary)" />
-            <Icon v-else icon="solar:moon-linear" width="24" height="24"  style="color: var(--text-primary)" />
+            <IconSunLine v-if="isDark" width="24" height="24" style="color: var(--text-primary)" />
+            <IconMoonLinear v-else width="24" height="24" style="color: var(--text-primary)" />
         </button>
       </div>
     </div>
@@ -70,7 +70,8 @@ import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter, useRoute } from 'vue-router'
 import { useTheme } from '../composables/useTheme'
-import { Icon } from "@iconify/vue";
+import IconSunLine from '~icons/si/sun-line'
+import IconMoonLinear from '~icons/solar/moon-linear'
 
 const { t, locale } = useI18n()
 const router = useRouter()

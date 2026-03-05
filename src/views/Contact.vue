@@ -3,7 +3,7 @@
     <section class="hero">
       <div class="hero-content">
         <div class="hero-badge">
-          <Icon icon="akar-icons:location" width="40" height="40"  style="color: currentColor" />
+          <IconLocation width="40" height="40" style="color: currentColor" />
         </div>
         <h1>{{ t('contact.title') }}</h1>
         <p class="hero-lead">{{ t('contact.subtitle') }}</p>
@@ -14,33 +14,33 @@
       <div class="contact-cards">
         <a :href="`tel:${t('contact_info.phone')}`" class="contact-card phone-card">
           <div class="card-icon">
-              <Icon icon="mdi-light:phone" width="32" height="32"  style="color: currentColor" />
+              <IconPhone width="32" height="32" style="color: currentColor" />
           </div>
           <div class="card-content">
             <h3>{{ t('contact.phone_title') }}</h3>
             <p class="contact-value">{{ t('contact_info.phone') }}</p>
           </div>
           <div class="card-arrow">
-              <Icon icon="mingcute:arrow-right-fill" width="20" height="20"  style="color: currentColor" />
+              <IconArrowRightFill width="20" height="20" style="color: currentColor" />
           </div>
         </a>
 
         <a :href="`mailto:${t('contact_info.email')}`" class="contact-card email-card">
           <div class="card-icon">
-              <Icon icon="material-symbols:mail-outline" width="32" height="32"  style="color: currentColor" />
+              <IconMail width="32" height="32" style="color: currentColor" />
           </div>
           <div class="card-content">
             <h3>{{ t('contact.email_title') }}</h3>
             <p class="contact-value">{{ t('contact_info.email') }}</p>
           </div>
           <div class="card-arrow">
-              <Icon icon="mingcute:arrow-right-fill" width="20" height="20"  style="color: currentColor" />
+              <IconArrowRightFill width="20" height="20" style="color: currentColor" />
           </div>
         </a>
 
         <div class="contact-card address-card">
           <div class="card-icon">
-            <Icon icon="akar-icons:location" width="32" height="32"  style="color: currentColor" />
+            <IconLocation width="32" height="32" style="color: currentColor" />
           </div>
           <div class="card-content">
             <h3>{{ t('contact.address_title') }}</h3>
@@ -58,12 +58,12 @@
           <div v-if="!mapLoaded" class="map-placeholder">
             <div class="map-placeholder-content">
               <div class="map-placeholder-icon">
-                <Icon icon="akar-icons:location" width="48" height="48"  style="color: currentColor" />
+                <IconLocation width="48" height="48" style="color: currentColor" />
               </div>
               <h3>{{ t('contact.map_load_title') }}</h3>
               <p>{{ t('contact.map_load_text') }}</p>
               <button @click="loadMap" class="map-load-btn">
-                <Icon icon="mdi-light:map-marker" width="20" height="20"  style="color: currentColor" />
+                <IconMapMarker width="20" height="20" style="color: currentColor" />
                 {{ t('contact.map_load_button') }}
               </button>
             </div>
@@ -86,7 +86,7 @@
         </div>
         <router-link :to="`/${locale}/booking`" class="btn">
           {{ t('contact.cta_button') }}
-          <Icon icon="mingcute:arrow-right-fill" width="20" height="20"  style="color: currentColor" />
+          <IconArrowRightFill width="20" height="20" style="color: currentColor" />
         </router-link>
       </div>
     </div>
@@ -96,7 +96,11 @@
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Icon } from "@iconify/vue";
+import IconLocation from '~icons/akar-icons/location'
+import IconPhone from '~icons/mdi-light/phone'
+import IconArrowRightFill from '~icons/mingcute/arrow-right-fill'
+import IconMail from '~icons/material-symbols/mail-outline'
+import IconMapMarker from '~icons/mdi-light/map-marker'
 
 const { t, locale } = useI18n()
 const mapLoaded = ref(false)

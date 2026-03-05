@@ -62,7 +62,7 @@
       <div class="container">
         <div class="intro-highlight">
           <div class="intro-badge">
-            <Icon icon="ei:check" width="45" height="45"  style="color: var(--text-primary)" />
+            <IconEiCheck width="45" height="45" style="color: var(--text-primary)" />
           </div>
           <h2>{{ t('home.welcome_title') }}</h2>
           <p class="intro-lead">{{ t('home.welcome_text') }}</p>
@@ -71,19 +71,19 @@
         <div class="features-grid">
           <div class="feature-card featured">
             <div class="feature-icon">
-              <Icon icon="wpf:past" width="32" height="32"  style="color: var(--text-primary)" />
+              <IconWpfPast width="32" height="32" style="color: var(--text-primary)" />
             </div>
             <h3>{{ t('home.section3_title') }}</h3>
             <p>{{ t('home.section3_text') }}</p>
             <router-link :to="`/${locale}/neurofeedback`" class="feature-link">
               {{ t('home.learn_more') }}
-              <Icon icon="mingcute:arrow-right-fill" width="16" height="16"  style="color: var(--text-primary)" />
+              <IconArrowRightFill width="16" height="16" style="color: var(--text-primary)" />
             </router-link>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">
-              <Icon icon="radix-icons:people" width="28" height="28"  style="color: var(--text-primary)" />
+              <IconRadixPeople width="28" height="28" style="color: var(--text-primary)" />
             </div>
             <h3>{{ t('home.section1_title') }}</h3>
             <p>{{ t('home.section1_text') }}</p>
@@ -91,7 +91,7 @@
           
           <div class="feature-card">
             <div class="feature-icon">
-              <Icon icon="mdi:clock-outline" width="28" height="28"  style="color: var(--text-primary)" />
+              <IconMdiClock width="28" height="28" style="color: var(--text-primary)" />
             </div>
             <h3>{{ t('home.section3_title') }}</h3>
             <p>{{ t('home.section3_text') }}</p>
@@ -106,7 +106,11 @@
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useTheme } from '../composables/useTheme'
-import { Icon } from "@iconify/vue"
+import IconEiCheck from '~icons/ei/check'
+import IconWpfPast from '~icons/wpf/past'
+import IconArrowRightFill from '~icons/mingcute/arrow-right-fill'
+import IconRadixPeople from '~icons/radix-icons/people'
+import IconMdiClock from '~icons/mdi/clock-outline'
 import gsap from 'gsap'
 
 const { t, locale } = useI18n()
