@@ -2,34 +2,31 @@
   <div class="page">
     <section class="hero">
       <div class="hero-content">
-        <div class="hero-badge">
-          <IconCalendar width="40" height="40" style="color: var(--text-primary)" />
-        </div>
         <h1>{{ t('booking.title') }}</h1>
         <p class="hero-lead">{{ t('booking.subtitle') }}</p>
+        <div class="hero-steps">
+          <div class="hero-step" :class="{ active: !selectedSlot }">
+            <span class="step-number">1</span>
+            <span class="step-label">{{ t('booking.step_select') }}</span>
+          </div>
+          <div class="hero-step-arrow">→</div>
+          <div class="hero-step" :class="{ active: !!selectedSlot }">
+            <span class="step-number">2</span>
+            <span class="step-label">{{ t('booking.step_form') }}</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <div class="container">
       <!-- Calendar Section -->
       <div class="calendar-section">
-        <div class="section-header">
-          <h2>{{ t('booking.calendar_title') }}</h2>
-          <p>{{ t('booking.calendar_subtitle') }}</p>
-        </div>
-
         <div class="calendar-container">
           <div class="calendar-header">
-            <button @click="previousWeek" class="nav-btn" :disabled="currentWeekIndex === 0">
-              <IconArrowLeft width="24" height="24" style="color: var(--text-primary)" />
-            </button>
             <div class="calendar-title">
               <h3>{{ t('booking.select_date') }}</h3>
               <p class="week-indicator">{{ t('booking.week_of') }} {{ currentPeriodLabel }}</p>
             </div>
-            <button @click="nextWeek" class="nav-btn" :disabled="currentWeekIndex >= availableWeeks.length - 1">
-              <IconArrowRight width="24" height="24" style="color: var(--text-primary)" />
-            </button>
           </div>
 
           <div v-if="loading" class="calendar-loading">
@@ -38,7 +35,14 @@
           </div>
 
           <div v-else-if="currentWeek && currentWeek.length > 0" class="calendar-content">
-            <div class="calendar-days">
+            <div class="calendar-nav-row"
+              @touchstart.passive="onTouchStart"
+              @touchend.passive="onTouchEnd"
+            >
+              <button @click="previousWeek" class="nav-btn" :disabled="currentWeekIndex === 0">
+                <IconArrowLeft width="24" height="24" style="color: var(--text-primary)" />
+              </button>
+              <div class="calendar-days" :style="{ gridTemplateColumns: `repeat(${daysPerView}, 1fr)` }">
               <div v-for="day in currentWeek" :key="day.date" class="day-card">
                 <div class="day-header">
                   <div class="day-name">{{ day.dayName }}</div>
@@ -47,7 +51,7 @@
                 <div class="day-slots">
                   <div class="time-grid">
                     <button
-                      v-for="slot in day.slots.slice(0, 8)"
+                      v-for="slot in day.slots"
                       :key="slot.time"
                       @click="selectTimeSlot(day.date, slot.time)"
                       :class="['time-btn', { 
@@ -60,18 +64,15 @@
                       <span class="time-text">{{ slot.time }}</span>
                     </button>
                   </div>
-                  <button 
-                    v-if="day.slots.length > 8" 
-                    class="show-more-btn"
-                    @click="showMoreSlots(day.date)"
-                  >
-                    +{{ day.slots.length - 8 }} {{ t('booking.more_times') }}
-                  </button>
                   <div v-if="day.slots.length === 0" class="no-slots">
                     {{ t('booking.no_slots') }}
                   </div>
                 </div>
               </div>
+              </div>
+              <button @click="nextWeek" class="nav-btn" :disabled="currentWeekIndex >= availableWeeks.length - 1">
+                <IconArrowRight width="24" height="24" style="color: var(--text-primary)" />
+              </button>
             </div>
 
             <div class="calendar-info">
@@ -94,7 +95,7 @@
       </div>
 
       <!-- Booking Form Section -->
-      <div class="form-section">
+      <div class="form-section" ref="formSection">
         <div class="section-header">
           <h2>{{ t('booking.form_title') }}</h2>
           <p v-if="selectedSlot">
@@ -172,7 +173,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import IconCalendar from '~icons/uil/calendar'
 import IconArrowLeft from '~icons/iconamoon/arrow-left-2-bold'
@@ -187,6 +188,7 @@ const loading = ref(true)
 const calendarData = ref(null)
 const currentWeekIndex = ref(0)
 const selectedSlot = ref(null)
+const formSection = ref(null)
 
 const formData = ref({
   name: '',
@@ -197,18 +199,25 @@ const formData = ref({
 
 // Real calendar data
 const availableDays = ref([])
+const windowWidth = ref(window.innerWidth)
+
+function onResize() {
+  windowWidth.value = window.innerWidth
+}
+
+const daysPerView = computed(() => {
+  if (windowWidth.value < 500) return 1
+  if (windowWidth.value < 800) return 2
+  return 3
+})
 
 const availableWeeks = computed(() => {
-  // Group days into weeks (showing 3-5 days per view)
   if (availableDays.value.length === 0) return []
-  
+  const perView = daysPerView.value
   const weeks = []
-  const daysPerView = 3
-  
-  for (let i = 0; i < availableDays.value.length; i += daysPerView) {
-    weeks.push(availableDays.value.slice(i, i + daysPerView))
+  for (let i = 0; i < availableDays.value.length; i += perView) {
+    weeks.push(availableDays.value.slice(i, i + perView))
   }
-  
   return weeks
 })
 
@@ -255,6 +264,9 @@ function isSelected(date, time) {
 
 function selectTimeSlot(date, time) {
   selectedSlot.value = { date, time }
+  nextTick(() => {
+    formSection.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  })
 }
 
 function previousWeek() {
@@ -269,69 +281,27 @@ function nextWeek() {
   }
 }
 
-function showMoreSlots(date) {
-  // Could open a modal with all time slots for this day
-  console.log('Show more slots for', date)
-}
-
 async function fetchCalendarData() {
   loading.value = true
   try {
     // Fetch via our own Cloudflare Pages Function proxy.
-    // This keeps the user's IP private — the request to calendarapp.de
-    // is made server-side by Cloudflare, never from the visitor's browser.
+    // The proxy POSTs to calendarapp.de server-side, parses the HTML and
+    // returns clean JSON — the visitor's IP is never sent to a third party.
     const response = await fetch('/api/calendar')
-    const imageData = await response.blob()
-    
-    // Since the API returns an image, we'll use mock data for now
-    // In a real implementation, you would have a proper JSON endpoint
-    // For demonstration, create realistic available slots
-    const today = new Date()
-    const days = []
-    
-    // Generate next 3 Fridays with time slots
-    for (let weekOffset = 0; weekOffset < 6; weekOffset++) {
-      const date = new Date(today)
-      date.setDate(date.getDate() + (5 - date.getDay() + 7) % 7 + (weekOffset * 7))
-      
-      const dayName = getDayName(date)
-      const slots = []
-      
-      // Morning slots (8:00 - 12:30)
-      for (let hour = 8; hour <= 12; hour++) {
-        for (let min = 0; min < 60; min += 30) {
-          if (hour === 12 && min === 30) continue // skip 12:30, end at 12:00
-          const time = `${hour.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}`
-          slots.push({ time, blocked: false })
-        }
-      }
+    if (!response.ok) throw new Error(`Proxy error ${response.status}`)
+    const { days: rawDays } = await response.json()
 
-      // Afternoon slots (14:00 - 17:00)
-      for (let hour = 14; hour <= 17; hour++) {
-        for (let min = 0; min < 60; min += 30) {
-          if (hour === 17 && min === 30) continue // skip 17:30, end at 17:00
-          const time = `${hour.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}`
-          slots.push({ time, blocked: false })
-        }
-      }
+    // Enrich each day with a localised day-name derived from the ISO date
+    const days = rawDays.map(({ date, slots }) => {
+      const dateObj = new Date(date + 'T00:00:00')
+      const dayName = getDayName(dateObj)
+      return { date, dayName, slots }
+    })
 
-      // Build local YYYY-MM-DD string without UTC conversion
-      const y = date.getFullYear()
-      const m = String(date.getMonth() + 1).padStart(2, '0')
-      const d = String(date.getDate()).padStart(2, '0')
-
-      days.push({
-        date: `${y}-${m}-${d}`,
-        dayName,
-        slots
-      })
-    }
-    
     availableDays.value = days
     loading.value = false
   } catch (error) {
     console.error('Error fetching calendar data:', error)
-    // Fallback to basic mock data on error
     availableDays.value = []
     loading.value = false
   }
@@ -350,8 +320,34 @@ const handleSubmit = () => {
   window.location.href = `mailto:${t('contact_info.email')}?subject=${subject}&body=${encodeURIComponent(body)}`
 }
 
+// Clamp the page index when daysPerView changes due to resizing
+watch(daysPerView, () => {
+  currentWeekIndex.value = Math.min(
+    currentWeekIndex.value,
+    Math.max(0, availableWeeks.value.length - 1)
+  )
+})
+
+const touchStartX = ref(0)
+
+function onTouchStart(e) {
+  touchStartX.value = e.touches[0].clientX
+}
+
+function onTouchEnd(e) {
+  const delta = touchStartX.value - e.changedTouches[0].clientX
+  if (Math.abs(delta) < 50) return
+  if (delta > 0) nextWeek()
+  else previousWeek()
+}
+
 onMounted(() => {
+  window.addEventListener('resize', onResize)
   fetchCalendarData()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', onResize)
 })
 </script>
 
@@ -362,7 +358,7 @@ onMounted(() => {
 
 .hero {
   background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-  padding: 8rem 2rem 6rem;
+  padding: 4.5rem 2rem 3rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -375,23 +371,62 @@ onMounted(() => {
   z-index: 2;
 }
 
-.hero-badge {
+.hero-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.hero-step {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 2px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition-base);
+}
+
+.hero-step.active {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.hero-step .step-number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
-  background: var(--bg-primary);
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  border: 3px solid var(--border-color);
-  color: var(--text-primary);
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: var(--border-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.hero-step.active .step-number {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.hero-step-arrow {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin: 0 0 0.5rem;
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.02em;
@@ -412,7 +447,7 @@ onMounted(() => {
 
 /* Calendar Section */
 .calendar-section {
-  margin-top: -3rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
 }
 
@@ -446,13 +481,21 @@ onMounted(() => {
 }
 
 .calendar-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-  gap: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 2px solid var(--border-color);
+}
+
+.calendar-nav-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.calendar-nav-row .calendar-days {
+  flex: 1;
+  min-width: 0;
 }
 
 .calendar-title {
@@ -837,7 +880,7 @@ onMounted(() => {
   }
 
   .calendar-days {
-    grid-template-columns: 1fr;
+    /* columns driven by daysPerView binding */
   }
 
   .form-row {
@@ -854,9 +897,8 @@ onMounted(() => {
     gap: 1rem;
   }
 
-  .calendar-header {
-    flex-direction: column;
-    gap: 1rem;
+  .calendar-nav-row {
+    gap: 0.5rem;
   }
 
   .calendar-title h3 {

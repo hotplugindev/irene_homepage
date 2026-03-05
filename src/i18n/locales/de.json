@@ -66,8 +66,6 @@
   "booking": {
     "title": "Terminanfrage",
     "subtitle": "Ich freue mich auf Ihre Nachricht",
-    "calendar_title": "Verfügbare Termine",
-    "calendar_subtitle": "Wählen Sie einen passenden Termin aus dem Kalender",
     "select_date": "Datum wählen",
     "week_of": "Woche vom",
     "loading": "Kalender wird geladen...",
@@ -76,6 +74,8 @@
     "no_slots": "Keine Termine verfügbar",
     "no_dates_available": "Aktuell keine Termine verfügbar",
     "more_times": "weitere Zeiten",
+    "step_select": "Termin im Kalender wählen",
+    "step_form": "Anfrage absenden",
     "selected_time": "Ausgewählter Termin",
     "info_title": "Kontaktmöglichkeiten",
     "info_text": "Sie können mich gerne telefonisch oder per E-Mail kontaktieren, oder nutzen Sie das untenstehende Kontaktformular für Ihre Terminanfrage.",

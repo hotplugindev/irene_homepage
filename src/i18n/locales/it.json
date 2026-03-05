@@ -66,8 +66,6 @@
   "booking": {
     "title": "Richiesta appuntamento",
     "subtitle": "Attendo con piacere il tuo messaggio",
-    "calendar_title": "Appuntamenti disponibili",
-    "calendar_subtitle": "Seleziona un appuntamento adatto dal calendario",
     "select_date": "Seleziona data",
     "week_of": "Settimana del",
     "loading": "Caricamento calendario...",
@@ -76,6 +74,8 @@
     "no_slots": "Nessun appuntamento disponibile",
     "no_dates_available": "Nessun appuntamento attualmente disponibile",
     "more_times": "altri orari",
+    "step_select": "Scegli un orario nel calendario",
+    "step_form": "Invia la richiesta",
     "selected_time": "Appuntamento selezionato",
     "info_title": "Possibilità di contatto",
     "info_text": "Puoi contattarmi volentieri telefonicamente o via e-mail, oppure utilizza il modulo di contatto qui sotto per la tua richiesta di appuntamento.",
