@@ -231,12 +231,17 @@ const currentPeriodLabel = computed(() => {
 })
 
 function formatDate(dateStr) {
-  const date = new Date(dateStr)
+  // Append local midnight to avoid UTC-parsing shifting the date back one day
+  const date = new Date(dateStr + 'T00:00:00')
   return date.toLocaleDateString(locale.value === 'de' ? 'de-DE' : 'it-IT', {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric'
   })
+}
+
+function getDayName(date) {
+  return date.toLocaleDateString(locale.value === 'de' ? 'de-DE' : 'it-IT', { weekday: 'long' })
 }
 
 function formatSelectedSlot() {
@@ -272,8 +277,10 @@ function showMoreSlots(date) {
 async function fetchCalendarData() {
   loading.value = true
   try {
-    // Fetch calendar state from API
-    const response = await fetch('https://app.calendarapp.de/?getCalState=95942')
+    // Fetch via our own Cloudflare Pages Function proxy.
+    // This keeps the user's IP private — the request to calendarapp.de
+    // is made server-side by Cloudflare, never from the visitor's browser.
+    const response = await fetch('/api/calendar')
     const imageData = await response.blob()
     
     // Since the API returns an image, we'll use mock data for now
@@ -287,32 +294,36 @@ async function fetchCalendarData() {
       const date = new Date(today)
       date.setDate(date.getDate() + (5 - date.getDay() + 7) % 7 + (weekOffset * 7))
       
-      const dayName = locale.value === 'de' ? 'Freitag' : 'Venerdì'
+      const dayName = getDayName(date)
       const slots = []
       
       // Morning slots (8:00 - 12:30)
       for (let hour = 8; hour <= 12; hour++) {
         for (let min = 0; min < 60; min += 30) {
+          if (hour === 12 && min === 30) continue // skip 12:30, end at 12:00
           const time = `${hour.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}`
-          // Randomly block some slots to simulate real calendar
-          const blocked = Math.random() > 0.7
-          slots.push({ time, blocked })
+          slots.push({ time, blocked: false })
         }
       }
-      
+
       // Afternoon slots (14:00 - 17:00)
       for (let hour = 14; hour <= 17; hour++) {
         for (let min = 0; min < 60; min += 30) {
+          if (hour === 17 && min === 30) continue // skip 17:30, end at 17:00
           const time = `${hour.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}`
-          const blocked = Math.random() > 0.6
-          slots.push({ time, blocked })
+          slots.push({ time, blocked: false })
         }
       }
-      
+
+      // Build local YYYY-MM-DD string without UTC conversion
+      const y = date.getFullYear()
+      const m = String(date.getMonth() + 1).padStart(2, '0')
+      const d = String(date.getDate()).padStart(2, '0')
+
       days.push({
-        date: date.toISOString().split('T')[0],
+        date: `${y}-${m}-${d}`,
         dayName,
-        slots: slots.filter(s => !s.blocked || Math.random() > 0.5) // Filter to show mix of available/blocked
+        slots
       })
     }
     
