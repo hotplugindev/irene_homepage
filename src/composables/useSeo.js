@@ -9,54 +9,54 @@ export function useSeo() {
   const seoData = {
     de: {
       home: {
-        title: 'Dr. Irene Berti - Kinder- und Jugendpsychiatrie Brixen Südtirol',
+        title: 'Irene Berti - Kinder- und Jugendpsychiatrie Brixen Südtirol',
         description: 'Fachärztin für Kinder- und Jugendpsychiatrie und Psychotherapie in Brixen, Südtirol. Private Praxis für mentale Gesundheit von Kindern und Jugendlichen. Alternative zum öffentlichen Gesundheitssystem.',
         keywords: 'Kinderpsychiatrie Brixen, Jugendpsychiatrie Südtirol, Kinderpsychotherapie Brixen, mentale Gesundheit Kinder, Privatpraxis Psychiatrie Südtirol, Neurofeedback Brixen, ADHS Behandlung Südtirol, Angststörungen Kinder Brixen, Psychotherapie Jugendliche Alto Adige'
       },
       neurofeedback: {
-        title: 'Neurofeedback Therapie Brixen - Dr. Irene Berti Südtirol',
+        title: 'Neurofeedback - Irene Berti Brixen Südtirol',
         description: 'Innovative Neurofeedback-Therapie für ADHS, Konzentrationsstörungen und Angststörungen bei Kindern und Jugendlichen in Brixen, Südtirol. Wissenschaftlich fundierte Methode.',
         keywords: 'Neurofeedback Brixen, ADHS Therapie Südtirol, Konzentration verbessern Kinder, Neurofeedback Alto Adige, Biofeedback Brixen, ADHS Behandlung ohne Medikamente'
       },
       about: {
-        title: 'Über Dr. Irene Berti - Kinderpsychiatrie Brixen Südtirol',
+        title: 'Über Irene Berti - Kinder- und Jugendpsychiatrie Brixen Südtirol',
         description: 'Dr. med. univ. Irene Berti - Fachärztin für Kinder- und Jugendpsychiatrie mit über 20 Jahren Erfahrung in Italien, Österreich, Schweiz und Deutschland. Privatpraxis in Brixen.',
         keywords: 'Kinderarzt Psychiatrie Brixen, Facharzt Jugendpsychiatrie Südtirol, Psychotherapeut Kinder Brixen, zweisprachige Psychiaterin Alto Adige'
       },
       contact: {
-        title: 'Kontakt & Praxis - Dr. Irene Berti Brixen Südtirol',
-        description: 'Kontaktieren Sie Dr. Irene Berti in Brixen, Domplatz 20. Private Praxis für Kinder- und Jugendpsychiatrie in Südtirol. Termine nach Vereinbarung.',
+        title: 'Kontakt - Irene Berti Kinder- und Jugendpsychiatrie Brixen Südtirol',
+        description: 'Kontaktieren Sie Dr. med. univ Irene Berti in Brixen, Domplatz 20. Private Praxis für Kinder- und Jugendpsychiatrie in Südtirol. Termine nach Vereinbarung.',
         keywords: 'Psychiater Brixen Kontakt, Kinderpsychiatrie Domplatz Brixen, Praxis Jugendpsychiatrie Südtirol, Termin Kinderpsychotherapie'
       },
       booking: {
-        title: 'Termin buchen - Dr. Irene Berti Kinderpsychiatrie Brixen',
+        title: 'Termin buchen - Irene Berti Kinder- und Jugendpsychiatrie Brixen',
         description: 'Vereinbaren Sie einen Termin in der Privatpraxis für Kinder- und Jugendpsychiatrie in Brixen. Online-Terminbuchung verfügbar.',
         keywords: 'Termin Kinderpsychiatrie Brixen, Erstgespräch Jugendpsychiatrie, Online Termin Psychiater Südtirol'
       }
     },
     it: {
       home: {
-        title: 'Dott.ssa Irene Berti - Neuropsichiatria Infantile Bressanone Alto Adige',
+        title: 'Irene Berti - Neuropsichiatria Infantile Bressanone Alto Adige',
         description: 'Specialista in neuropsichiatria infantile e psicoterapia a Bressanone, Alto Adige. Studio privato per la salute mentale di bambini e adolescenti. Alternativa al sistema sanitario pubblico.',
         keywords: 'neuropsichiatra infantile Bressanone, psicoterapia bambini Alto Adige, salute mentale bambini, studio privato psichiatria Alto Adige, neurofeedback Bressanone, trattamento ADHD Alto Adige, disturbi ansia bambini, psicoterapia adolescenti Südtirol'
       },
       neurofeedback: {
-        title: 'Terapia Neurofeedback Bressanone - Dott.ssa Irene Berti Alto Adige',
+        title: 'Neurofeedback Irene Berti - Bressanone Alto Adige',
         description: 'Terapia innovativa con neurofeedback per ADHD, disturbi di concentrazione e disturbi d\'ansia in bambini e adolescenti a Bressanone, Alto Adige. Metodo scientificamente fondato.',
         keywords: 'neurofeedback Bressanone, terapia ADHD Alto Adige, migliorare concentrazione bambini, neurofeedback Südtirol, biofeedback Bressanone, trattamento ADHD senza farmaci'
       },
       about: {
-        title: 'Chi sono - Dott.ssa Irene Berti Neuropsichiatra Infantile Bressanone',
+        title: 'Chi sono - Irene Berti Neuropsichiatra Infantile Bressanone Alto Adige',
         description: 'Dott.ssa med. univ. Irene Berti - Specialista in neuropsichiatria infantile con oltre 20 anni di esperienza in Italia, Austria, Svizzera e Germania. Studio privato a Bressanone.',
         keywords: 'neuropsichiatra infantile Bressanone, specialista psichiatria adolescenti Alto Adige, psicoterapeuta bambini Bressanone, psichiatra bilingue Südtirol'
       },
       contact: {
-        title: 'Contatto & Studio - Dott.ssa Irene Berti Bressanone Alto Adige',
+        title: 'Contatto - Irene Berti Neuropsichiatria Infantile Bressanone Alto Adige',
         description: 'Contatti Dott.ssa Irene Berti a Bressanone, Piazza Duomo 20. Studio privato per neuropsichiatria infantile in Alto Adige. Appuntamenti su prenotazione.',
         keywords: 'psichiatra Bressanone contatto, neuropsichiatria infantile Piazza Duomo, studio psichiatria Alto Adige, appuntamento psicoterapia bambini'
       },
       booking: {
-        title: 'Prenota Appuntamento - Dott.ssa Irene Berti Neuropsichiatria Infantile',
+        title: 'Prenota Appuntamento - Irene Berti Neuropsichiatria Infantile Bressanone',
         description: 'Prenota un appuntamento nello studio privato per neuropsichiatria infantile a Bressanone. Prenotazione online disponibile.',
         keywords: 'appuntamento neuropsichiatra Bressanone, primo colloquio psichiatria infantile, appuntamento online psichiatra Alto Adige'
       }
@@ -68,7 +68,7 @@ export function useSeo() {
     '@type': 'MedicalBusiness',
     '@id': 'https://ireneberti.eu',
     name: 'Dr. med. univ. Irene Berti',
-    alternateName: 'Dott.ssa Irene Berti',
+    alternateName: 'Irene Berti',
     description: {
       de: 'Fachärztin für Kinder- und Jugendpsychiatrie und Psychotherapie',
       it: 'Specialista in neuropsichiatria infantile e psicoterapia'
