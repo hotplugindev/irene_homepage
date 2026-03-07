@@ -70,7 +70,7 @@ export function useSeo() {
     name: 'Dr. med. univ. Irene Berti',
     alternateName: 'Irene Berti',
     description: {
-      de: 'Fachärztin für Kinder- und Jugendpsychiatrie und Psychotherapie',
+      de: 'Fachärztin für Kinder- und Jugendpsychiatrie und -psychotherapie',
       it: 'Specialista in neuropsichiatria infantile e psicoterapia'
     },
     url: 'https://ireneberti.eu',
