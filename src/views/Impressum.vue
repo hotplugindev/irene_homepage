@@ -11,9 +11,10 @@
         <section class="content-section">
           <h2>{{ t('impressum.provider_title') }}</h2>
           <div class="info-box">
-            <p><strong>Dr. Irene Berti</strong></p>
+            <p><strong>Dr. med. univ. Irene Berti</strong></p>
             <p>{{ t('impressum.profession') }}</p>
-            <p>Corsico, Milano, Italia</p>
+            <p>Piazza Duomo 20</p>
+            <p>39042 Bressanone (BZ)</p>
           </div>
         </section>
 
@@ -21,7 +22,7 @@
           <h2>{{ t('impressum.contact_title') }}</h2>
           <div class="info-box">
             <p>{{ t('impressum.phone') }}: <a href="tel:+393395846754" class="inline-link">+39 339 584 6754</a></p>
-            <p>{{ t('impressum.email') }}: <a href="mailto:info@ireneurofeedback.com" class="inline-link">info@ireneurofeedback.com</a></p>
+            <p>{{ t('impressum.email') }}: <a href="mailto:info@ireneberti.eu" class="inline-link">info@ireneurofeedback.com</a></p>
           </div>
         </section>
 
