@@ -43,7 +43,7 @@
     "cta_title": "Prenota un appuntamento"
   },
   "contact": {
-    "title": "Contatti",
+    "title": "Contatto",
     "subtitle": "Mettiti in contatto con me",
     "info_title": "Informazioni di contatto",
     "address_title": "Indirizzo",
@@ -232,7 +232,7 @@
     "home": "Home",
     "privacy": "Privacy",
     "impressum": "Impressum",
-    "contact": "Contatti",
+    "contact": "Contatto",
     "navigation": "Navigazione",
     "legal": "Informazioni legali"
   }
