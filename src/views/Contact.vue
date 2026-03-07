@@ -51,7 +51,6 @@
 
       <div class="map-section">
         <div class="map-header">
-          <h2>{{ t('contact.map_title') }}</h2>
           <p>{{ t('contact_info.address') }}, {{ t('contact_info.city') }}</p>
         </div>
         <div class="map-container">
