@@ -3,9 +3,9 @@
     <div class="footer-container">
       <div class="footer-content">
         <div class="footer-left">
-          <span class="footer-brand">Dr. Irene Berti</span>
+          <span class="footer-brand">Irene Berti</span>
           <span class="footer-separator">·</span>
-          <span class="footer-location">Brixen, Alto Adige</span>
+          <span class="footer-location">Bressanone, Alto Adige</span>
         </div>
         
         <div class="footer-links">
