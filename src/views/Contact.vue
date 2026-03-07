@@ -51,7 +51,7 @@
 
       <div class="map-section">
         <div class="map-header">
-          <p>{{ t('contact_info.address') }}, {{ t('contact_info.city') }}</p>
+          <h2>{{ t('contact.map_title') }}</h2>
         </div>
         <div class="map-container">
           <div v-if="!mapLoaded" class="map-placeholder">
