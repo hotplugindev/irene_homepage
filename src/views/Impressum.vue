@@ -21,8 +21,8 @@
         <section class="content-section">
           <h2>{{ t('impressum.contact_title') }}</h2>
           <div class="info-box">
-            <p>{{ t('impressum.phone') }}: <a href="tel:+393395846754" class="inline-link">+39 339 584 6754</a></p>
-            <p>{{ t('impressum.email') }}: <a href="mailto:info@ireneberti.eu" class="inline-link">info@ireneurofeedback.com</a></p>
+            <p>{{ t('impressum.email') }}</p>
+            <p>{{ t('impressum.pecmail') }}</p>
           </div>
         </section>
 

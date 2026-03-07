@@ -24,8 +24,7 @@
             <p><strong>Dr. med. univ. Irene Berti</strong></p>
             <p>{{ t('privacy.controller_profession') }}</p>
             <p>Domplatz 20, IT-39042 Brixen / Bressanone (BZ)</p>
-            <p>{{ t('privacy.controller_email_label') }}: <a href="mailto:info@ireneberti.eu" class="inline-link">info@ireneberti.eu</a></p>
-            <p>{{ t('privacy.controller_phone_label') }}: <a href="tel:+393792011123" class="inline-link">+39 379 20 11 123</a></p>
+            <p>{{ t('privacy.controller_email_label') }}</p>
           </div>
         </section>
 
